@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        postLocalNotification()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +23,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func postLocalNotification() {
+        let content = UNMutableNotificationContent();
+        content.title = "title"
+        content.subtitle = "subtitle"
+        content.body = "this is body field"
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let req : UNNotificationRequest = UNNotificationRequest(identifier: "1",
+                                                                content: content,
+                                                                trigger: trigger)
+        UNUserNotificationCenter.current().add(req) { (error) in
+            if (error != nil) {
+                print(error)
+            }
+            else {
+                print("OK")
+            }
+        }
+    }
 }
 
