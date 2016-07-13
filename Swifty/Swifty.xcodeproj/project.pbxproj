@@ -12,6 +12,8 @@
 		DA4828C11D35EDC0005C8862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4828BF1D35EDC0005C8862 /* Main.storyboard */; };
 		DA4828C31D35EDC0005C8862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4828C21D35EDC0005C8862 /* Assets.xcassets */; };
 		DA4828C61D35EDC0005C8862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4828C41D35EDC0005C8862 /* LaunchScreen.storyboard */; };
+		DA4828D11D35EEC1005C8862 /* XYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4828D01D35EEC1005C8862 /* XYViewController.m */; };
+		DA4828D31D3612CE005C8862 /* XYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4828D21D3612CE005C8862 /* XYViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		DA4828C21D35EDC0005C8862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA4828C51D35EDC0005C8862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA4828C71D35EDC0005C8862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA4828CE1D35EEC1005C8862 /* Swifty-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swifty-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA4828CF1D35EEC1005C8862 /* XYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYViewController.h; sourceTree = "<group>"; };
+		DA4828D01D35EEC1005C8862 /* XYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYViewController.m; sourceTree = "<group>"; };
+		DA4828D21D3612CE005C8862 /* XYViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYViewController.swift; sourceTree = "<group>"; };
+		DA4828D41D361593005C8862 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = Swifty/MyPlayground.playground; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +61,27 @@
 		DA4828BA1D35EDC0005C8862 /* Swifty */ = {
 			isa = PBXGroup;
 			children = (
+				DA4828CD1D35EE91005C8862 /* objc-›swift */,
 				DA4828BB1D35EDC0005C8862 /* AppDelegate.swift */,
 				DA4828BD1D35EDC0005C8862 /* ViewController.swift */,
 				DA4828BF1D35EDC0005C8862 /* Main.storyboard */,
 				DA4828C21D35EDC0005C8862 /* Assets.xcassets */,
 				DA4828C41D35EDC0005C8862 /* LaunchScreen.storyboard */,
 				DA4828C71D35EDC0005C8862 /* Info.plist */,
+				DA4828D41D361593005C8862 /* MyPlayground.playground */,
 			);
 			path = Swifty;
+			sourceTree = "<group>";
+		};
+		DA4828CD1D35EE91005C8862 /* objc-›swift */ = {
+			isa = PBXGroup;
+			children = (
+				DA4828CF1D35EEC1005C8862 /* XYViewController.h */,
+				DA4828D01D35EEC1005C8862 /* XYViewController.m */,
+				DA4828CE1D35EEC1005C8862 /* Swifty-Bridging-Header.h */,
+				DA4828D21D3612CE005C8862 /* XYViewController.swift */,
+			);
+			path = "objc-›swift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4828BE1D35EDC0005C8862 /* ViewController.swift in Sources */,
+				DA4828D31D3612CE005C8862 /* XYViewController.swift in Sources */,
+				DA4828D11D35EEC1005C8862 /* XYViewController.m in Sources */,
 				DA4828BC1D35EDC0005C8862 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,10 +271,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Swifty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.Swifty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swifty/objc-›swift/Swifty-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +285,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Swifty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.Swifty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swifty/objc-›swift/Swifty-Bridging-Header.h";
 			};
 			name = Release;
 		};
