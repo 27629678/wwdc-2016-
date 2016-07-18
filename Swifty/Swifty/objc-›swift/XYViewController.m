@@ -21,7 +21,7 @@
 {
     [super viewWillAppear:animated];
     
-    ViewController* vc = [[ViewController alloc] init];
+    MainViewController* vc = [[MainViewController alloc] init];
     NSLog(@"%@", [vc localeDescription]);
 }
 
