@@ -26,6 +26,18 @@ class ViewController: UIViewController {
         content.title = "title"
         content.subtitle = "subtitle"
         content.body = "this is body field"
+        
+        do {
+            let attachPath: String? = Bundle.main.pathForResource("avatar", ofType: "jpg");
+            let attach = try UNNotificationAttachment(identifier: "identifier",
+                                                      url: URL(fileURLWithPath: attachPath!),
+                                                      options: nil);
+            content.attachments = [attach]
+        }
+        catch {
+            print("can not find the image resource!!!")
+        }
+        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let req : UNNotificationRequest = UNNotificationRequest(identifier: "1",
                                                                 content: content,
