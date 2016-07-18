@@ -28,11 +28,13 @@ class ViewController: UIViewController {
         content.body = "this is body field"
         
         do {
-            let attachPath: String? = Bundle.main.pathForResource("avatar", ofType: "jpg");
-            let attach = try UNNotificationAttachment(identifier: "identifier",
-                                                      url: URL(fileURLWithPath: attachPath!),
-                                                      options: nil);
-            content.attachments = [attach]
+            let attachPath = Bundle.main.pathForResource("avatar", ofType: "jpg");
+            if let urlPath = attachPath {
+                let attach = try UNNotificationAttachment(identifier: "identifier",
+                                                          url: URL(fileURLWithPath: urlPath),
+                                                          options: nil);
+                content.attachments = [attach]
+            }
         }
         catch {
             print("can not find the image resource!!!")
