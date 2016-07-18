@@ -28,10 +28,12 @@ class ViewController: UIViewController {
         content.body = "this is body field"
         
         do {
-            let attachPath = Bundle.main.pathForResource("avatar", ofType: "jpg");
+//            let attachPath = Bundle.main.pathForResource("avatar", ofType: "jpg")
+            let attachPath = Bundle.main.pathForResource("datboi", ofType: "gif")
             if let urlPath = attachPath {
+                let url = URL(fileURLWithPath: urlPath)
                 let attach = try UNNotificationAttachment(identifier: "identifier",
-                                                          url: URL(fileURLWithPath: urlPath),
+                                                          url: url,
                                                           options: nil);
                 content.attachments = [attach]
             }

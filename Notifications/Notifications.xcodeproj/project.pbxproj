@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA21B0401D3CBA36009CE73B /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA21B03F1D3CBA36009CE73B /* avatar.jpg */; };
+		DA21B04B1D3CC9F6009CE73B /* datboi.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA21B04A1D3CC9F6009CE73B /* datboi.gif */; };
 		DAC449981D2A14F3002D58F4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC449971D2A14F3002D58F4 /* NotificationService.swift */; };
 		DAC4499C1D2A14F3002D58F4 /* ServiceExtensions.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DAC449951D2A14F3002D58F4 /* ServiceExtensions.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DAC449A81D2A15A9002D58F4 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC449A71D2A15A9002D58F4 /* UserNotifications.framework */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		DA21B03F1D3CBA36009CE73B /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		DA21B04A1D3CC9F6009CE73B /* datboi.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = datboi.gif; sourceTree = "<group>"; };
 		DAC449951D2A14F3002D58F4 /* ServiceExtensions.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ServiceExtensions.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC449971D2A14F3002D58F4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		DAC449991D2A14F3002D58F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				DA21B03F1D3CBA36009CE73B /* avatar.jpg */,
+				DA21B04A1D3CC9F6009CE73B /* datboi.gif */,
 			);
 			path = resource;
 			sourceTree = SOURCE_ROOT;
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA21B0401D3CBA36009CE73B /* avatar.jpg in Resources */,
+				DA21B04B1D3CC9F6009CE73B /* datboi.gif in Resources */,
 				DADB2EE61D2A11E700BEC23B /* LaunchScreen.storyboard in Resources */,
 				DADB2EE31D2A11E700BEC23B /* Assets.xcassets in Resources */,
 				DADB2EE11D2A11E700BEC23B /* Main.storyboard in Resources */,
