@@ -17,5 +17,7 @@ if #available(iOS 8.3, *) {
     
 }
 else if #available(OSX 10.0, *) {
+    var a: Int?
     
+    caculation(origin: a!, target: 0)
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 extension XYViewController {
-    public func logViewState(msg : String) {
+    public func logViewState(_ msg : String) {
         print("\(msg)");
     }
 }
