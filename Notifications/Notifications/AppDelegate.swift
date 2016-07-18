@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        UNUserNotificationCenter.current().requestAuthorization([.sound, .alert, .badge]) { (success, error) in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) { (success, error) in
             if (error != nil) {
                 print(error)
             }
