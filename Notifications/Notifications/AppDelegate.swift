@@ -10,21 +10,14 @@ import UIKit
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) { (success, error) in
-            if (error != nil) {
-                print(error)
-            }
-            else {
-                print(true)
-            }
-        }
+        registerForNotifications()
         
         return true
     }
@@ -51,5 +44,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+}
+
+extension AppDelegate {
+    func registerForNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
+            if error != nil {
+                print(error)
+            }
+        }
+        
+        center.delegate = self;
+        
+//        let action = UNNotificationAction(identifier: "plain", title: "wowww", options: .foreground)
+//        let options = UNNotificationCategoryOptions(rawValue: 0)
+//        let category = UNNotificationCategory(identifier: "haha", actions: [action], minimalActions: [action], intentIdentifiers: [], options: options)
+//        center.setNotificationCategories([category])
+    }
 }
 

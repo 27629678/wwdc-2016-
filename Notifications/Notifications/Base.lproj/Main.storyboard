@@ -19,20 +19,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w11-om-IT8">
-                                <state key="normal" title="Local Notification"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI4-xy-etT">
+                                <state key="normal" title="Send"/>
                                 <connections>
-                                    <action selector="localNotificationBtnAction:" destination="dkx-z0-nzr" eventType="touchUpInside" id="UHp-gG-Cyp"/>
+                                    <action selector="sendBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qam-ye-XHD"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhI-QL-s1s"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AttachmentEnabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WJ-ne-g2M">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggv-Yu-Q0f">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification「ContentExtension」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UG-aI-wlM">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJ5-6H-yqN">
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendToContentExtensionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l10-oS-zcB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="w11-om-IT8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3X9-zX-fBp"/>
-                            <constraint firstItem="w11-om-IT8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9aF-qB-fMD"/>
-                            <constraint firstItem="w11-om-IT8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="P2d-Iu-bss"/>
+                            <constraint firstItem="iJ5-6H-yqN" firstAttribute="top" secondItem="TI4-xy-etT" secondAttribute="bottom" constant="8" symbolic="YES" id="4Ev-JS-1wp"/>
+                            <constraint firstItem="5UG-aI-wlM" firstAttribute="top" secondItem="iJ5-6H-yqN" secondAttribute="top" id="67F-Up-RcK"/>
+                            <constraint firstItem="4WJ-ne-g2M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="75N-bC-0Cc"/>
+                            <constraint firstItem="Ggv-Yu-Q0f" firstAttribute="top" secondItem="4WJ-ne-g2M" secondAttribute="bottom" constant="19" id="7bx-TM-Our"/>
+                            <constraint firstItem="4WJ-ne-g2M" firstAttribute="top" secondItem="PhI-QL-s1s" secondAttribute="top" id="8Pv-WN-Mk0"/>
+                            <constraint firstItem="5UG-aI-wlM" firstAttribute="bottom" secondItem="iJ5-6H-yqN" secondAttribute="bottom" id="IOM-14-gA9"/>
+                            <constraint firstItem="Ggv-Yu-Q0f" firstAttribute="trailing" secondItem="5UG-aI-wlM" secondAttribute="trailing" id="Noz-PJ-EVI"/>
+                            <constraint firstItem="5UG-aI-wlM" firstAttribute="top" secondItem="Ggv-Yu-Q0f" secondAttribute="bottom" constant="8" symbolic="YES" id="ODF-le-698"/>
+                            <constraint firstItem="Ggv-Yu-Q0f" firstAttribute="top" secondItem="TI4-xy-etT" secondAttribute="top" id="UYN-8B-zgB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TI4-xy-etT" secondAttribute="trailing" constant="3" id="XjB-L1-mfM"/>
+                            <constraint firstItem="PhI-QL-s1s" firstAttribute="leading" secondItem="4WJ-ne-g2M" secondAttribute="trailing" constant="27" id="XyH-Fu-dLw"/>
+                            <constraint firstItem="PhI-QL-s1s" firstAttribute="leading" secondItem="TI4-xy-etT" secondAttribute="leading" id="Zdf-0n-OFU"/>
+                            <constraint firstItem="4WJ-ne-g2M" firstAttribute="bottom" secondItem="PhI-QL-s1s" secondAttribute="bottom" id="fOK-db-ots"/>
+                            <constraint firstItem="PhI-QL-s1s" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iBg-Qd-qCL"/>
+                            <constraint firstItem="Ggv-Yu-Q0f" firstAttribute="leading" secondItem="5UG-aI-wlM" secondAttribute="leading" id="kgI-Kh-Noi"/>
+                            <constraint firstItem="4WJ-ne-g2M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="mVc-QV-Bgj"/>
+                            <constraint firstItem="TI4-xy-etT" firstAttribute="leading" secondItem="iJ5-6H-yqN" secondAttribute="leading" id="mXM-pt-23M"/>
+                            <constraint firstItem="TI4-xy-etT" firstAttribute="trailing" secondItem="iJ5-6H-yqN" secondAttribute="trailing" id="u6k-g2-Axq"/>
+                            <constraint firstItem="4WJ-ne-g2M" firstAttribute="trailing" secondItem="Ggv-Yu-Q0f" secondAttribute="trailing" id="uME-yZ-qM1"/>
+                            <constraint firstItem="4WJ-ne-g2M" firstAttribute="leading" secondItem="Ggv-Yu-Q0f" secondAttribute="leading" id="yxt-OG-dRk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="attachmentEnabled" destination="PhI-QL-s1s" id="sKG-gO-tey"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

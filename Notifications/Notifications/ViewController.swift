@@ -11,6 +11,7 @@ import UserNotifications
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var attachmentEnabled: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,38 +22,68 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func localNotificationBtnAction(_ sender: AnyObject) {
-        let content = UNMutableNotificationContent();
-        content.title = "title"
-        content.subtitle = "subtitle"
-        content.body = "this is body field"
-        
-        do {
-//            let attachPath = Bundle.main.pathForResource("avatar", ofType: "jpg")
-            let attachPath = Bundle.main.pathForResource("datboi", ofType: "gif")
-            if let urlPath = attachPath {
-                let url = URL(fileURLWithPath: urlPath)
-                let attach = try UNNotificationAttachment(identifier: "identifier",
-                                                          url: url,
-                                                          options: nil);
-                content.attachments = [attach]
-            }
-        }
-        catch {
-            print("can not find the image resource!!!")
-        }
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    @IBAction func sendBtnAction(_ sender: AnyObject) {
+        sendNotification(false)
+    }
+    
+    @IBAction func sendToContentExtensionAction(_ sender: AnyObject) {
+        sendNotification(true)
+    }
+}
+
+extension ViewController {
+    func sendNotification(_ toExtension: Bool) {
+        let content = defaultContent(attachmentEnabled.isOn, sendTo: toExtension)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
         let req : UNNotificationRequest = UNNotificationRequest(identifier: "1",
                                                                 content: content,
                                                                 trigger: trigger)
         UNUserNotificationCenter.current().add(req) { (error) in
-            if (error != nil) {
-                print(error)
+            assert(error == nil)
+        }
+    }
+    
+    func defaultContent(_ showAttachment: Bool, sendTo toExtension: Bool) -> UNNotificationContent {
+        let date = Date(timeIntervalSinceNow: 0)
+        let content = UNMutableNotificationContent();
+        content.title = "Hello, world!"
+        content.subtitle = date.description
+        content.body = "Body:亲，产品过锁定期后就转到灵活账户了，就不再收取退保费啦~~"
+        content.sound = UNNotificationSound.default()
+        
+        if showAttachment {
+            content.attachments = defaultAttachment()
+        }
+        
+        if toExtension {
+            content.categoryIdentifier = "haha"
+        }
+        
+        return content
+    }
+    
+    func defaultAttachment() -> [UNNotificationAttachment] {
+        var attach: UNNotificationAttachment?
+        do {
+            let attachPath = Bundle.main.pathForResource("avatar", ofType: "jpg")
+//            let attachPath = Bundle.main.pathForResource("jordan", ofType: "gif")
+            if let urlPath = attachPath {
+                let url = URL(fileURLWithPath: urlPath)
+                attach = try UNNotificationAttachment(identifier: "identifier",
+                                                      url: url,
+                                                      options: nil)
             }
-            else {
-                print("OK")
-            }
+        }
+        catch {
+            assert(false)
+            print("can not find the image resource!!!")
+        }
+        
+        if let attachment = attach {
+            return [attachment]
+        }
+        else {
+            return []
         }
     }
 }
