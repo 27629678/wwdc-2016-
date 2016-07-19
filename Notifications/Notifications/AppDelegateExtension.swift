@@ -34,9 +34,10 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let notForwardAction = UNNotificationAction(identifier: "notForward",
                                                     title: "not forward",
                                                     options: .foreground)
-        
+        let actions = [unlockAction, destructiveAction, foregroundAction, notForwardAction]
         let category = UNNotificationCategory(identifier: "default",
-                                              actions: [unlockAction, destructiveAction, foregroundAction, notForwardAction], minimalActions: [],
+                                              actions: actions,
+                                              minimalActions: [],
                                               intentIdentifiers: [],
                                               options: UNNotificationCategoryOptions(rawValue: UInt(0)))
         
