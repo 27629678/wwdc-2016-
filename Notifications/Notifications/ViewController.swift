@@ -56,7 +56,7 @@ extension ViewController {
         }
         
         if toExtension {
-            content.categoryIdentifier = "haha"
+            content.categoryIdentifier = "default"
         }
         
         return content

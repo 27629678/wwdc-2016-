@@ -16,6 +16,7 @@
 		DAC449AD1D2A15A9002D58F4 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC449AC1D2A15A9002D58F4 /* NotificationViewController.swift */; };
 		DAC449B01D2A15A9002D58F4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC449AE1D2A15A9002D58F4 /* MainInterface.storyboard */; };
 		DAC449B41D2A15A9002D58F4 /* ContentExtensions.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DAC449A51D2A15A9002D58F4 /* ContentExtensions.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DACBF2301D3DBB460031C307 /* AppDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBF22F1D3DBB460031C307 /* AppDelegateExtension.swift */; };
 		DADB2EDC1D2A11E700BEC23B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB2EDB1D2A11E700BEC23B /* AppDelegate.swift */; };
 		DADB2EDE1D2A11E700BEC23B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB2EDD1D2A11E700BEC23B /* ViewController.swift */; };
 		DADB2EE11D2A11E700BEC23B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADB2EDF1D2A11E700BEC23B /* Main.storyboard */; };
@@ -67,6 +68,8 @@
 		DAC449AC1D2A15A9002D58F4 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		DAC449AF1D2A15A9002D58F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		DAC449B11D2A15A9002D58F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACBF22F1D3DBB460031C307 /* AppDelegateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtension.swift; sourceTree = "<group>"; };
+		DACBF2361D3DC66D0031C307 /* Notifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Notifications.entitlements; sourceTree = "<group>"; };
 		DADB2ED81D2A11E700BEC23B /* Notifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB2EDB1D2A11E700BEC23B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DADB2EDD1D2A11E700BEC23B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,8 +167,10 @@
 		DADB2EDA1D2A11E700BEC23B /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				DACBF2361D3DC66D0031C307 /* Notifications.entitlements */,
 				DA21B03C1D3CB9D0009CE73B /* resource */,
 				DADB2EDB1D2A11E700BEC23B /* AppDelegate.swift */,
+				DACBF22F1D3DBB460031C307 /* AppDelegateExtension.swift */,
 				DADB2EDD1D2A11E700BEC23B /* ViewController.swift */,
 				DADB2EDF1D2A11E700BEC23B /* Main.storyboard */,
 				DADB2EE21D2A11E700BEC23B /* Assets.xcassets */,
@@ -259,6 +264,11 @@
 						DevelopmentTeam = 3LH7676BHR;
 						DevelopmentTeamName = "晓华 于 (Personal Team)";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -334,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADB2EDE1D2A11E700BEC23B /* ViewController.swift in Sources */,
+				DACBF2301D3DBB460031C307 /* AppDelegateExtension.swift in Sources */,
 				DADB2EDC1D2A11E700BEC23B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,7 +28,7 @@
 		<dict>
 			<key>UNNotificationExtensionCategory</key>
 			<array>
-				<string>haha</string>
+				<string>default</string>
 			</array>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
 			<real>1</real>

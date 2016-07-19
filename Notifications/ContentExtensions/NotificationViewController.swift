@@ -23,4 +23,16 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         self.label?.text = notification.request.content.body
     }
 
+    func didReceive(_ response: UNNotificationResponse, completionHandler completion: (UNNotificationContentExtensionResponseOption) -> Void) {
+        if response.actionIdentifier == "notForward" {
+            completion(.dismiss)
+        }
+        else if response.actionIdentifier == "destructive" {
+            completion(.doNotDismiss)
+        }
+        else {
+            completion(.dismissAndForwardAction)
+        }
+    }
+    
 }
