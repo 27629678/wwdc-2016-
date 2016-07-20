@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA21B0401D3CBA36009CE73B /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA21B03F1D3CBA36009CE73B /* avatar.jpg */; };
-		DA21B04D1D3CDCC5009CE73B /* jordan.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA21B04C1D3CDCC5009CE73B /* jordan.gif */; };
 		DA2452CF1D3F0DB00083ADD3 /* 236850.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA2452CE1D3F0DB00083ADD3 /* 236850.jpg */; };
+		DA4F7BCB1D3F66C4001C1356 /* jordan.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA4F7BCA1D3F66C4001C1356 /* jordan.gif */; };
 		DAC449981D2A14F3002D58F4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC449971D2A14F3002D58F4 /* NotificationService.swift */; };
 		DAC4499C1D2A14F3002D58F4 /* ServiceExtensions.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DAC449951D2A14F3002D58F4 /* ServiceExtensions.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DAC449A81D2A15A9002D58F4 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC449A71D2A15A9002D58F4 /* UserNotifications.framework */; };
@@ -59,8 +59,8 @@
 
 /* Begin PBXFileReference section */
 		DA21B03F1D3CBA36009CE73B /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
-		DA21B04C1D3CDCC5009CE73B /* jordan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jordan.gif; path = ../../../../Desktop/jordan.gif; sourceTree = "<group>"; };
 		DA2452CE1D3F0DB00083ADD3 /* 236850.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 236850.jpg; sourceTree = "<group>"; };
+		DA4F7BCA1D3F66C4001C1356 /* jordan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = jordan.gif; sourceTree = "<group>"; };
 		DAC449951D2A14F3002D58F4 /* ServiceExtensions.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ServiceExtensions.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC449971D2A14F3002D58F4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		DAC449991D2A14F3002D58F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				DA21B03F1D3CBA36009CE73B /* avatar.jpg */,
-				DA21B04C1D3CDCC5009CE73B /* jordan.gif */,
+				DA4F7BCA1D3F66C4001C1356 /* jordan.gif */,
 			);
 			path = resource;
 			sourceTree = SOURCE_ROOT;
@@ -316,7 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA21B04D1D3CDCC5009CE73B /* jordan.gif in Resources */,
+				DA4F7BCB1D3F66C4001C1356 /* jordan.gif in Resources */,
 				DA21B0401D3CBA36009CE73B /* avatar.jpg in Resources */,
 				DADB2EE61D2A11E700BEC23B /* LaunchScreen.storyboard in Resources */,
 				DADB2EE31D2A11E700BEC23B /* Assets.xcassets in Resources */,
