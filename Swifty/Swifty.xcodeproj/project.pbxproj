@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3770671D5A1E4A00506ECE /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3770661D5A1E4A00506ECE /* Human.swift */; };
+		DA3770691D5A1EA800506ECE /* TestRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3770681D5A1EA800506ECE /* TestRunner.swift */; };
+		DA37706B1D5A1EF300506ECE /* ClassesTestRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37706A1D5A1EF300506ECE /* ClassesTestRunner.swift */; };
 		DA4828BC1D35EDC0005C8862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4828BB1D35EDC0005C8862 /* AppDelegate.swift */; };
 		DA4828BE1D35EDC0005C8862 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4828BD1D35EDC0005C8862 /* MainViewController.swift */; };
 		DA4828C11D35EDC0005C8862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4828BF1D35EDC0005C8862 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA3770661D5A1E4A00506ECE /* Human.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		DA3770681D5A1EA800506ECE /* TestRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRunner.swift; sourceTree = "<group>"; };
+		DA37706A1D5A1EF300506ECE /* ClassesTestRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTestRunner.swift; sourceTree = "<group>"; };
 		DA4828B81D35EDC0005C8862 /* Swifty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swifty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4828BB1D35EDC0005C8862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA4828BD1D35EDC0005C8862 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA3770651D5A1E1A00506ECE /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				DA3770661D5A1E4A00506ECE /* Human.swift */,
+				DA37706A1D5A1EF300506ECE /* ClassesTestRunner.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
 		DA4828AF1D35EDC0005C8862 = {
 			isa = PBXGroup;
 			children = (
@@ -61,7 +76,9 @@
 		DA4828BA1D35EDC0005C8862 /* Swifty */ = {
 			isa = PBXGroup;
 			children = (
+				DA3770651D5A1E1A00506ECE /* classes */,
 				DA4828CD1D35EE91005C8862 /* objc-›swift */,
+				DA3770681D5A1EA800506ECE /* TestRunner.swift */,
 				DA4828BB1D35EDC0005C8862 /* AppDelegate.swift */,
 				DA4828BD1D35EDC0005C8862 /* MainViewController.swift */,
 				DA4828BF1D35EDC0005C8862 /* Main.storyboard */,
@@ -111,7 +128,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = XY;
 				TargetAttributes = {
 					DA4828B71D35EDC0005C8862 = {
@@ -157,7 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4828BE1D35EDC0005C8862 /* MainViewController.swift in Sources */,
+				DA3770691D5A1EA800506ECE /* TestRunner.swift in Sources */,
 				DA4828D31D3612CE005C8862 /* XYViewController.swift in Sources */,
+				DA37706B1D5A1EF300506ECE /* ClassesTestRunner.swift in Sources */,
+				DA3770671D5A1E4A00506ECE /* Human.swift in Sources */,
 				DA4828D11D35EEC1005C8862 /* XYViewController.m in Sources */,
 				DA4828BC1D35EDC0005C8862 /* AppDelegate.swift in Sources */,
 			);
@@ -293,6 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.Swifty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swifty/objc-›swift/Swifty-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
