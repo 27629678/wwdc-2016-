@@ -18,7 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerNotification()
         
         let courier = Courier(groupIdentifier: "group.x")
-        courier.sendmessage("hello, world!", command: "init")
+        if courier.sendmessage("hello, world!", command: "init") {
+            // do nothing
+        }
+        else {
+            print("courier send message failed!")
+        }
         
         return true
     }

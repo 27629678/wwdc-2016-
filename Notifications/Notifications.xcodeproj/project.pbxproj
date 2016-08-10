@@ -248,6 +248,7 @@
 				DADB2ED51D2A11E600BEC23B /* Frameworks */,
 				DADB2ED61D2A11E600BEC23B /* Resources */,
 				DAC449A01D2A14F3002D58F4 /* Embed App Extensions */,
+				DAFA1FA91D5AFCE400E4BAD2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -364,6 +365,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DAFA1FA91D5AFCE400E4BAD2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "find \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 wc -l | awk '$1 > 200 && $2 != \"total\" { print $2 \":1: warning: file more than 200 lines\" }'";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA7851891D3F75910022EBFB /* Sources */ = {
