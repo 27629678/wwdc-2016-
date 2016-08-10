@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 extension ViewController {
     func sendNotification(_ toExtension: Bool) {
         let content = defaultContent(attachmentEnabled.isOn, sendTo: toExtension)
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
         let req : UNNotificationRequest = UNNotificationRequest(identifier: "1",
                                                                 content: content,
                                                                 trigger: trigger)
@@ -65,8 +65,8 @@ extension ViewController {
     func defaultAttachment() -> [UNNotificationAttachment] {
         var attach: UNNotificationAttachment?
         do {
-            let attachPath = Bundle.main.pathForResource("avatar", ofType: "jpg")
-//            let attachPath = Bundle.main.pathForResource("jordan", ofType: "gif")
+//            let attachPath = Bundle.main.pathForResource("avatar", ofType: "jpg")
+            let attachPath = Bundle.main.path(forResource: "jordan", ofType: "gif")
             if let urlPath = attachPath {
                 let url = URL(fileURLWithPath: urlPath)
                 attach = try UNNotificationAttachment(identifier: "identifier",
