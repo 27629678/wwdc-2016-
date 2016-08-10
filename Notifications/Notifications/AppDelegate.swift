@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         registerNotification()
         
+        let courier = Courier(groupIdentifier: "group.x")
+        courier.sendmessage("hello, world!", command: "init")
+        
         return true
     }
-    
 }
 

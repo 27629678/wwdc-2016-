@@ -1,8 +1,8 @@
 //
 //  NotificationService.swift
-//  ServiceExtensions
+//  ServiceExtension
 //
-//  Created by hzyuxiaohua on 16/7/4.
+//  Created by hzyuxiaohua on 16/7/20.
 //  Copyright © 2016年 X Co., Ltd. All rights reserved.
 //
 
@@ -13,13 +13,34 @@ class NotificationService: UNNotificationServiceExtension {
     var contentHandler: ((UNNotificationContent) -> Void)?
     var bestAttemptContent: UNMutableNotificationContent?
 
-    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler:(UNNotificationContent) -> Void) {
+    override func didReceive(_ request: UNNotificationRequest,
+                             withContentHandler contentHandler:(UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
         if let bestAttemptContent = bestAttemptContent {
             // Modify the notification content here...
             bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
+            
+            let urlString = request.content.userInfo["url-attachment"] as! String
+            if let url = URL(string: urlString) {
+                let attachment: UNNotificationAttachment?
+                do {
+                    attachment = try UNNotificationAttachment(identifier: "", url: url, options: nil)
+                }
+                catch {
+                    assert(false)
+                    attachment = nil
+                }
+                
+                if let attachment = attachment {
+                    bestAttemptContent.attachments = [attachment]
+                }
+            }
+            
+            if let uid = request.content.userInfo["uid"] as? String {
+                recordNotificationUid(uid)
+            }
             
             contentHandler(bestAttemptContent)
         }
@@ -33,4 +54,7 @@ class NotificationService: UNNotificationServiceExtension {
         }
     }
 
+    func recordNotificationUid(_ uid: String!) {
+        // do nothing
+    }
 }

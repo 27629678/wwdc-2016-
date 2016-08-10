@@ -4,7 +4,6 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.d.migo.Notifications</string>
 		<string>group.x</string>
 	</array>
 </dict>
