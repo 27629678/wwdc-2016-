@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D24B6E7042641FB36A5E38FF /* Pods_DataPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00A4824C92777ED7D3E0173 /* Pods_DataPersistence.framework */; };
 		DAD10BBC1D61F41600AEDBF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD10BBB1D61F41600AEDBF4 /* AppDelegate.swift */; };
 		DAD10BBE1D61F41600AEDBF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD10BBD1D61F41600AEDBF4 /* ViewController.swift */; };
 		DAD10BC11D61F41600AEDBF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD10BBF1D61F41600AEDBF4 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7FCD18DAFD7975D7B818B91B /* Pods-DataPersistence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataPersistence.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DataPersistence/Pods-DataPersistence.debug.xcconfig"; sourceTree = "<group>"; };
+		B4D0CF0F174025FEA556F285 /* Pods-DataPersistence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataPersistence.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DataPersistence/Pods-DataPersistence.release.xcconfig"; sourceTree = "<group>"; };
+		D00A4824C92777ED7D3E0173 /* Pods_DataPersistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataPersistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD10BB81D61F41600AEDBF4 /* DataPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD10BBB1D61F41600AEDBF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD10BBD1D61F41600AEDBF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24B6E7042641FB36A5E38FF /* Pods_DataPersistence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50881E5B36C521BF617791E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D00A4824C92777ED7D3E0173 /* Pods_DataPersistence.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C421456CE3C8D212DB2B2955 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FCD18DAFD7975D7B818B91B /* Pods-DataPersistence.debug.xcconfig */,
+				B4D0CF0F174025FEA556F285 /* Pods-DataPersistence.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DAD10BAF1D61F41600AEDBF4 = {
 			isa = PBXGroup;
 			children = (
 				DAD10BBA1D61F41600AEDBF4 /* DataPersistence */,
 				DAD10BB91D61F41600AEDBF4 /* Products */,
+				C421456CE3C8D212DB2B2955 /* Pods */,
+				50881E5B36C521BF617791E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAD10BCA1D61F41600AEDBF4 /* Build configuration list for PBXNativeTarget "DataPersistence" */;
 			buildPhases = (
+				45A2DE69E09A74C3C7024CE1 /* 📦 Check Pods Manifest.lock */,
 				DAD10BB41D61F41600AEDBF4 /* Sources */,
 				DAD10BB51D61F41600AEDBF4 /* Frameworks */,
 				DAD10BB61D61F41600AEDBF4 /* Resources */,
+				9890BFB5F8A179D4B560E1D6 /* 📦 Embed Pods Frameworks */,
+				413A93042F767DE90A77681D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		413A93042F767DE90A77681D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DataPersistence/Pods-DataPersistence-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45A2DE69E09A74C3C7024CE1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9890BFB5F8A179D4B560E1D6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DataPersistence/Pods-DataPersistence-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAD10BB41D61F41600AEDBF4 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		DAD10BCB1D61F41600AEDBF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FCD18DAFD7975D7B818B91B /* Pods-DataPersistence.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
@@ -266,12 +342,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "X-Co.--Ltd..DataPersistence";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		DAD10BCC1D61F41600AEDBF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4D0CF0F174025FEA556F285 /* Pods-DataPersistence.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
@@ -279,7 +356,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "X-Co.--Ltd..DataPersistence";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -302,6 +379,7 @@
 				DAD10BCC1D61F41600AEDBF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
