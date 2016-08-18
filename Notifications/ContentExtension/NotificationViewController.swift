@@ -30,7 +30,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         self.body?.text = notification.request.content.body
     }
 
-    func didReceive(_ response: UNNotificationResponse,
+    private func didReceive(_ response: UNNotificationResponse,
                     completionHandler completion: (UNNotificationContentExtensionResponseOption) -> Void) {
         if response.actionIdentifier == "notForward" {
             completion(.dismiss)

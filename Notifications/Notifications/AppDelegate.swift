@@ -13,17 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         registerNotification()
-        
-        let courier = Courier(groupIdentifier: "group.x")
-        if courier.sendmessage("hello, world!", command: "init") {
-            // do nothing
-        }
-        else {
-            print("courier send message failed!")
-        }
         
         return true
     }
