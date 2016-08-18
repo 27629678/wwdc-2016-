@@ -29,5 +29,13 @@ class ViewController: UIViewController {
     @IBAction func sendToContentExtensionAction(_ sender: AnyObject) {
         sendNotification(true)
     }
+    
+    @IBAction func updateBtnAction(_ sender: AnyObject) {
+        updateNotification("1")
+    }
+    
+    @IBAction func revokeBtnAction(_ sender: AnyObject) {
+        revokeNotification("1")
+    }
 }
 

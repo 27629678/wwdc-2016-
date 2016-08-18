@@ -10,10 +10,38 @@ import Foundation
 import UserNotifications
 
 extension ViewController {
-    func defaultContent(_ showAttachment: Bool, sendTo toExtension: Bool) -> UNNotificationContent {
+    
+    func sendNotification(_ toExtension: Bool) {
+        let content = defaultContent(attachmentEnabled.isOn, sendTo: toExtension)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        let req : UNNotificationRequest = UNNotificationRequest(identifier: "1",
+                                                                content: content,
+                                                                trigger: trigger)
+        UNUserNotificationCenter.current().add(req) { (error) in
+            assert(error == nil)
+        }
+    }
+    
+    func updateNotification(_ identifier: String) {
+        let content = defaultContent(attachmentEnabled.isOn, sendTo: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let req : UNNotificationRequest = UNNotificationRequest(identifier: "1",
+                                                                content: content,
+                                                                trigger: trigger)
+        UNUserNotificationCenter.current().add(req) { (error) in
+            assert(error == nil)
+        }
+    }
+    
+    func revokeNotification(_ identifier: String) {
+        UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["1"])
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["1"])
+    }
+    
+    private func defaultContent(_ showAttachment: Bool, sendTo toExtension: Bool) -> UNNotificationContent {
         let date = Date(timeIntervalSinceNow: 0)
         let content = UNMutableNotificationContent();
-        content.title = "Hello, world!"
+        content.title = toExtension == false ? "Hello, world!" : "Hello, world![modified]"
         content.subtitle = date.description
         content.body = "Body:亲，产品过锁定期后就转到灵活账户了，就不再收取退保费啦~~"
         content.sound = UNNotificationSound.default()
@@ -22,17 +50,17 @@ extension ViewController {
             content.categoryIdentifier = "default"
         }
         
+        if showAttachment {
+            content.attachments = [defaultAttachment()!]
+        }
+        
         return content
     }
     
-    func sendNotification(_ toExtension: Bool) {
-        let content = defaultContent(attachmentEnabled.isOn, sendTo: toExtension)
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
-        let req : UNNotificationRequest = UNNotificationRequest(identifier: "1",
-                                                                content: content,
-                                                                trigger: trigger)
-        UNUserNotificationCenter.current().add(req) { (error) in
-            assert(error == nil)
-        }
+    private func defaultAttachment() -> UNNotificationAttachment? {
+        let path = Bundle.main.path(forResource: "avatar", ofType: "jpg")
+        let url = URL(fileURLWithPath: path!)
+        
+        return try? UNNotificationAttachment(identifier: "attach", url: url, options: nil)
     }
 }
