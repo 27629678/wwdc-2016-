@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TeshRunner {
+class TestRunner {
     func run() {
         
     }

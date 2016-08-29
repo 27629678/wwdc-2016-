@@ -17,6 +17,8 @@
 		DA4828C61D35EDC0005C8862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4828C41D35EDC0005C8862 /* LaunchScreen.storyboard */; };
 		DA4828D11D35EEC1005C8862 /* XYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4828D01D35EEC1005C8862 /* XYViewController.m */; };
 		DA4828D31D3612CE005C8862 /* XYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4828D21D3612CE005C8862 /* XYViewController.swift */; };
+		DA6675301D73DD9800D6D82E /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA66752F1D73DD9800D6D82E /* Closure.swift */; };
+		DA6675321D73DDC200D6D82E /* ClosureTestRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6675311D73DDC200D6D82E /* ClosureTestRunner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		DA4828CF1D35EEC1005C8862 /* XYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYViewController.h; sourceTree = "<group>"; };
 		DA4828D01D35EEC1005C8862 /* XYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYViewController.m; sourceTree = "<group>"; };
 		DA4828D21D3612CE005C8862 /* XYViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYViewController.swift; sourceTree = "<group>"; };
+		DA66752F1D73DD9800D6D82E /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		DA6675311D73DDC200D6D82E /* ClosureTestRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTestRunner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		DA4828BA1D35EDC0005C8862 /* Swifty */ = {
 			isa = PBXGroup;
 			children = (
+				DA66752E1D73DD5E00D6D82E /* Closure */,
 				DA3770651D5A1E1A00506ECE /* classes */,
 				DA4828CD1D35EE91005C8862 /* objc-›swift */,
 				DA3770681D5A1EA800506ECE /* TestRunner.swift */,
@@ -97,6 +102,15 @@
 				DA4828D21D3612CE005C8862 /* XYViewController.swift */,
 			);
 			path = "objc-›swift";
+			sourceTree = "<group>";
+		};
+		DA66752E1D73DD5E00D6D82E /* Closure */ = {
+			isa = PBXGroup;
+			children = (
+				DA66752F1D73DD9800D6D82E /* Closure.swift */,
+				DA6675311D73DDC200D6D82E /* ClosureTestRunner.swift */,
+			);
+			path = Closure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +189,9 @@
 				DA3770691D5A1EA800506ECE /* TestRunner.swift in Sources */,
 				DA4828D31D3612CE005C8862 /* XYViewController.swift in Sources */,
 				DA37706B1D5A1EF300506ECE /* ClassesTestRunner.swift in Sources */,
+				DA6675321D73DDC200D6D82E /* ClosureTestRunner.swift in Sources */,
 				DA3770671D5A1E4A00506ECE /* Human.swift in Sources */,
+				DA6675301D73DD9800D6D82E /* Closure.swift in Sources */,
 				DA4828D11D35EEC1005C8862 /* XYViewController.m in Sources */,
 				DA4828BC1D35EDC0005C8862 /* AppDelegate.swift in Sources */,
 			);

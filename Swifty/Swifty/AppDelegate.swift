@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         ClassTestRunner().run()
+        ClosureTestRunner().run()
         var count = 60
         if #available(iOS 10.0, *) {
             let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in

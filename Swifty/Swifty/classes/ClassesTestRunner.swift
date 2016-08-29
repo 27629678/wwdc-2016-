@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ClassTestRunner: TeshRunner {
+class ClassTestRunner: TestRunner {
     override func run() {
         let human = Human(name: "yuxiaohua", age: 19)
         print(human.name)
