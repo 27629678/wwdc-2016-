@@ -14,10 +14,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         ClassTestRunner().run()
+        var count = 60
+        if #available(iOS 10.0, *) {
+            let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+                print("counting:\(count)")
+                count -= 1
+                
+                if count <= 0 {
+                    timer.invalidate()
+                }
+            }
+            
+            timer.fire()
+        } else {
+            // Fallback on earlier versions
+        }
         
         return true
     }

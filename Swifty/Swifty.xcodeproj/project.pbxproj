@@ -34,7 +34,6 @@
 		DA4828CF1D35EEC1005C8862 /* XYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYViewController.h; sourceTree = "<group>"; };
 		DA4828D01D35EEC1005C8862 /* XYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYViewController.m; sourceTree = "<group>"; };
 		DA4828D21D3612CE005C8862 /* XYViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYViewController.swift; sourceTree = "<group>"; };
-		DA4828D41D361593005C8862 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = Swifty/MyPlayground.playground; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +84,6 @@
 				DA4828C21D35EDC0005C8862 /* Assets.xcassets */,
 				DA4828C41D35EDC0005C8862 /* LaunchScreen.storyboard */,
 				DA4828C71D35EDC0005C8862 /* Info.plist */,
-				DA4828D41D361593005C8862 /* MyPlayground.playground */,
 			);
 			path = Swifty;
 			sourceTree = "<group>";
