@@ -37,6 +37,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        guard let query = url.query?.lowercased() else {
+            return false
+        }
+        
+        var message: String? = nil
+        var alert_type: UIAlertControllerStyle = .alert
+        
+        if query.contains("alert") {
+            message = "alert"
+        }
+        else if query.contains("actionsheet") {
+            message = "actionSheet"
+            alert_type = .actionSheet
+        }
+        else if query.contains("notification") {
+            message = "notification"
+        }
+        
+        let alert = UIAlertController(title: "Event", message: message ?? "no event", preferredStyle: alert_type)
+        let cancel_action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(cancel_action)
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+        
+        return true
+    }
 
 }
 

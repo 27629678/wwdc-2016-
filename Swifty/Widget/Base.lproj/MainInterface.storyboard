@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnS-1N-Jxb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="W5x-Zc-bmX"/>
+                                    <constraint firstAttribute="height" constant="30" id="cp9-QR-F8m"/>
+                                </constraints>
+                                <state key="normal" title="Alert"/>
+                                <connections>
+                                    <action selector="alertBtnAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="ncc-d0-2Q5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-BC-9YJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="R5G-bZ-AQJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="Uvy-we-3tO"/>
+                                </constraints>
+                                <state key="normal" title="ActionSheet"/>
+                                <connections>
+                                    <action selector="actionSheetBtnAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="d8j-4s-8gj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WS-ls-WKx">
+                                <state key="normal" title="Notification"/>
+                                <connections>
+                                    <action selector="notificationBtnAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="et4-x7-7EM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97540779373604769" green="0.98166929285974835" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zNa-BC-9YJ" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="HTF-1b-eYU"/>
+                            <constraint firstItem="VnS-1N-Jxb" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="11" id="IvB-4q-yqn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4WS-ls-WKx" secondAttribute="trailing" constant="4" id="Rse-gd-UGJ"/>
+                            <constraint firstItem="VnS-1N-Jxb" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="t2D-W2-G2e"/>
+                            <constraint firstItem="4WS-ls-WKx" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="u0Z-gs-chn"/>
+                            <constraint firstItem="zNa-BC-9YJ" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="xlQ-0I-bJk"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="60"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="93"/>
+        </scene>
+    </scenes>
+</document>
