@@ -1,4 +1,7 @@
 PODS:
+  - JSPatch (1.0):
+    - JSPatch/Core (= 1.0)
+  - JSPatch/Core (1.0)
   - Realm (1.0.0):
     - Realm/Headers (= 1.0.0)
   - Realm/Headers (1.0.0)
@@ -6,12 +9,14 @@ PODS:
     - Realm (= 1.0.0)
 
 DEPENDENCIES:
+  - JSPatch (~> 1.0)
   - RealmSwift (~> 1.0.0)
 
 SPEC CHECKSUMS:
+  JSPatch: c689ea4dde17441f2f4a95d40dfedb8900c20099
   Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
   RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
 
-PODFILE CHECKSUM: 4363054edf32b2eed10925e0929b7b2aa6f7b290
+PODFILE CHECKSUM: 5f1950437f25ff2d6e427e13b2df52fe0e788c01
 
 COCOAPODS: 1.0.0

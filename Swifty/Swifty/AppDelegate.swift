@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ClosureTestRunner().run()
         ErrorHandlingTestRunner().run()
         
+        
+        
         return true
     }
     
