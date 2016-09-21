@@ -19,21 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ClassTestRunner().run()
         ClosureTestRunner().run()
-        var count = 60
-        if #available(iOS 10.0, *) {
-            let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
-                print("counting:\(count)")
-                count -= 1
-                
-                if count <= 0 {
-                    timer.invalidate()
-                }
-            }
-            
-            timer.fire()
-        } else {
-            // Fallback on earlier versions
-        }
+        ErrorHandlingTestRunner().run()
         
         return true
     }

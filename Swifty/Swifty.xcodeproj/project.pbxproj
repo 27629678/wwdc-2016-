@@ -23,6 +23,7 @@
 		DAD9AEDD1D854AC9009DAEEA /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD9AEDC1D854AC9009DAEEA /* TodayViewController.m */; };
 		DAD9AEE01D854AC9009DAEEA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD9AEDE1D854AC9009DAEEA /* MainInterface.storyboard */; };
 		DAD9AEE41D854AC9009DAEEA /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DAD9AED61D854AC9009DAEEA /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DAF0A5C71D70440D00A30D81 /* ErrorHandlingDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0A5C61D70440D00A30D81 /* ErrorHandlingDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		DAD9AEDC1D854AC9009DAEEA /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		DAD9AEDF1D854AC9009DAEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		DAD9AEE11D854AC9009DAEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA4828D41D361593005C8862 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = Swifty/MyPlayground.playground; sourceTree = SOURCE_ROOT; };
+		DAF0A5C61D70440D00A30D81 /* ErrorHandlingDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandlingDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				DA66752E1D73DD5E00D6D82E /* Closure */,
+				DAF0A5C51D7043F600A30D81 /* ErrorHandling */,
 				DA3770651D5A1E1A00506ECE /* classes */,
 				DA4828CD1D35EE91005C8862 /* objc-›swift */,
 				DA3770681D5A1EA800506ECE /* TestRunner.swift */,
@@ -175,6 +179,14 @@
 				DAD9AEE11D854AC9009DAEEA /* Info.plist */,
 			);
 			path = Widget;
+			sourceTree = "<group>";
+		};
+		DAF0A5C51D7043F600A30D81 /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0A5C61D70440D00A30D81 /* ErrorHandlingDemo.swift */,
+			);
+			path = ErrorHandling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +303,7 @@
 				DA3770671D5A1E4A00506ECE /* Human.swift in Sources */,
 				DA6675301D73DD9800D6D82E /* Closure.swift in Sources */,
 				DA4828D11D35EEC1005C8862 /* XYViewController.m in Sources */,
+				DAF0A5C71D70440D00A30D81 /* ErrorHandlingDemo.swift in Sources */,
 				DA4828BC1D35EDC0005C8862 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
